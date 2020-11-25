@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Home Home</title> 
+      
+    <style type="text/css" media="screen"> 
+        body { 
+            background-color: skyblue; 
+            text-decoration-color: white; 
+            font-size:1em;  
+        } 
+    </style> 
+</head> 
+
+<body>
+
+    <form id="form" action="/" method="POST">
+        <input name="name" type="text">
+        <input name="email" type="text">
+        <input name="favoriteColor" type="text">
+        <input name="homeTown" type="text">
+        <input type="radio" name="sex" value="male">Male<br>
+        <input type="radio" name="sex" value="female">Female
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+
+
+    <center>
+        welcome <%=data.name%>, <%=data.timer%> word is you like:<br/>
+        <ul> 
+            <% data.hobbies.forEach((item)=>{%> 
+            <li><%=item%></li>  
+            <%});%> 
+        </ul> 
+    </center> 
+

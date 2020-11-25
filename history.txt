@@ -1,0 +1,78 @@
+what i know so far:
+
+today is 11.20.2020, less than 20 days before I need everything working well.
+what is everything?
+in this case, it is a suite of interactive, accessible, and connected pages for 
+students, teachers, and visitors.
+basic assumption is that each user is a document.
+    if webdev wingbird is activated, which mode do you want?
+        webdev wingbird modes (i>=1): learning, dofor, non-doing
+    algorithms i have certain: 
+    1. line by line understand + console.log
+    2. split in half, LR, repeat
+    3. call webdev wingbird
+        updated 11.22.2020
+    4. physically do something else for a while
+    5. google the problem
+    6. talk about it to someone
+
+before the beginning: maximum 20 students, 10 wingbirds, scalable visitors page (ads?)
+ 
+
+entrance.ejs:  this is the public access page. 
+welcome. role choice of student, wingbird, or visitors?guest? (icon)
+below this first choice, there is a slogan/clue <br> form+submit button (named "enter")
+    student(email validation)
+    wingbird(WB.email validation)
+    ?visitor(captcha and ip)
+every task has a timer, on submit with answer
+that value is called ${taskNum}timerVal and saved to database.
+
+icons 
+<i class="fas fa-user-graduate"></i>
+<i class="fas fa-stopwatch-20"></i>
+<i class="fas fa-kiwi-bird"></i>
+<i class="fas fa-feather-alt"></i>
+<i class="far fa-eye"></i>
+<i class="far fa-question-circle"></i>
+https://www.flaticon.com/free-icon/money_3075013?term=wing&page=1&position=56
+
+username creation: nameo, o nameo, whereforarthou nameo.
+
+tippis megamissions:
+1. 
+
+
+wingbird main missions (find your wingbird)(shuffle/youmaychoose)
+a database of 10(tfs)+10(wb) : 4-6 minute missions: _________ , full point condition
+1. watch a song from masked singer, correctly dadeuce who it is.
+2. read silently, artfully chunk it.
+3. read aloud,  be somebody sampled
+4. how many steps away can you go, and be back on time
+5. un/reliable meme, best or worst
+6. make and wear a mask that represents an important childhood memory, as "my how-to" video
+7. lose something, how does it feel?
+8. catch someone dreaming, dreaming of you.
+9. stack things up around someone, musically.
+10. remix an old project, make it spin
+11. drink finish it, from full
+12. declare your love, publicly
+13. stick it to the man, literally
+14. do two dadeuces and a fifestarr stretch, readaround
+15. juxtapose, to the rhythm of the rhyme
+16. make and wear a hat that represents an important childhood memory, as "my how-to" video
+17. explain the plot of a movie, no spoilers!
+18. remove specific words from an existing document, render it as a new story
+
+
+todo: https://fontawesome.com/how-to-use/on-the-web/styling/power-transforms
+https://fontawesome.com/how-to-use/on-the-web/styling/animating-icons
+
+spin the world <i class="fas fa-globe"></i><i class="fas fa-globe-asia"></i><i class="fas fa-globe-africa"></i><i class="fas fa-globe-europe"></i><i class="fas fa-globe-americas"></i>
+
+the spin for win symbol <i class="fas fa-biking"></i> <i class="fas fa-recycle"></i>
+
+the elements <i class="fas fa-icicles"></i><i class="fab fa-free-code-camp"><i class="fas fa-adjust"></i><i class="fab fa-algolia"></i><i class="fas fa-anchor"></i><i class="fas fa-wind"></i>
+
+the toolkit </i><i class="fas fa-fire-extinguisher"></i>
+

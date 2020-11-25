@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>input animations</title> 
+    </head>
+    <body>
+        <div class="hero">
+            <!-- does it make sense to add an id for js switching of text and image? -->
+            
+            <div class="hero-image">
+                <img src="images/xanthe2020.jpg">
+            </div>
+            <div class="hero-text">
+                <h1>...click the screen...</h1>
+                <p>Webdev Wingbird and I'm a Photographer*</p>
+                <a id=button>Work width me (玩家网门)</a>
+            </div>
+            <!-- can we make this movable? -->
+            <div class="form">
+                <input type="text" name="name" autocomplete="off" required />
+                <label for="name" class="label-name">
+                    <span class="content-name">...click and type here...</span>
+                </label>
+            </div>
+        </div>
+    <!-- this is the no-show HUD, that gets changed to display:flex in css onclick of card -->
+        <div class="hud-container">
+            <div class="box-overlay">
+                <button class="closeButt">CLOSE X</button>
+            <div class="hud-timer-box"></div>
+            <div class="hud-timer-box" id="nextText">
+                click <b class="flipText">upside-down</b> "i": <a href="https://tippi-fifestarr.github.io/DuhDeuce/">T </a><a target=_blank href="./next.html">!</a><a href="./input.html">m=r.com</a></div>
+        </div>
+    <script src="script.js"></script>
+    </body>
+
+</html>
+

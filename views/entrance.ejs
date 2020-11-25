@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>entrance</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script type="text/javascript">
+      function playAudio(url) {
+        new Audio(url).play();
+        console.log("played"+url)
+        while (playing){
+
+        }
+      }
+      function pauseit(url){
+        Audio(url).pause();
+        console.log("paused"+url)
+        let playing = false
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div>
+      <img src="/views/xanthe2020.jpg" height="69" width="69" onclick="playAudio('11102020-39+20+15+25--tk-gloomy_day.mp3')">this</img>
+      <img src="/views/xanthe2020.jpg" height="69" width="69" onclick="playAudio('../public/camel(1).mp3')">or this?</img>
+      <i onclick="pauseit('../public/camel(1).mp3')" class="far fa-pause-circle"></i>
+      <div class="container">
+        <% console.log(disc) %>
+        <% for(i in disc){%> 
+
+            <i id="disc<%= disc[i].name %>" class="big-icon fas fa-compact-disc fa-<%= disc[i].pulse %>" onclick="playAudio('<%= disc[i].url %>')"></i>
+          <% } %>
+
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .big-icon {
+    font-size: 500px;
+}
+</style>

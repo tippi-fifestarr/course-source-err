@@ -1,0 +1,59 @@
+TODO
+X get the node.js server running
+    listening on port
+X get the node.js server running express
+X hook into mongodb 
+x find all the documents
+find one document
+x insertOne a document
+look up npm validation
+X ejs with inputs that back end listens to
+when the user presses submit it validates the data and sends to mongodb
+insertOne? collection.insert 
+deploy to hiroku https://careerkarma.com/blog/deploy-application-to-heroku/
+front-end netlify to heroku 
+
+https://bezkoder.com/node-js-upload-store-images-mongodb/
+https://programmerblog.net/nodejs-file-upload-tutorial/
+
+https://docs.mongodb.com/drivers/node/fundamentals/connection
+
+whats this? ????
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://tippiFS:<password>@cluster0.icrot.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+<dbname? is that Project0 or cluster0
+src="./steps-question.png"
+
+https://docs.atlas.mongodb.com/driver-connection/
+    have the driver
+    TLS
+    IP access list (0.0.0.0 ? actual ip)
+    Database User (https://docs.mongodb.com/manual/core/security-users/)
+https://docs.mongodb.com/drivers/node/
+
+
+now that done:
+What’s next?
+
+Today, you were able to connect to a MongoDB database from a Node.js script, retrieve a list of databases in your cluster, and view the results in your console. Nice!
+
+In future posts in this series, we’ll dive into each of the CRUD (create, read, update, and delete) operations as well as topics like change streams, transactions, and the aggregation pipeline, so you’ll have the tools you need to successfully interact with data in your databases.
+
+In the meantime, check out the following resources:
+
+    MongoDB Node.js Driver (https://mongodb.github.io/node-mongodb-native/index.html)
+    Official MongoDB Documentation on the MongoDB Node.js Driver (https://bit.ly/NodeDocs_lauren)
+    MongoDB University Free Course: M220JS: MongoDB for Javascript Developers
+ (https://bit.ly/M220JS)
+ 
+
+ //dans whats next
+ https://docs.mongodb.com/drivers/node/fundamentals/crud/write-operations/insert
+ https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/retrieve

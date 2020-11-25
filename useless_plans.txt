@@ -1,0 +1,35 @@
+plans are useless, planning is everything;
+VSN___Contributions:
+
+see Make it clear pg 175 for steps
+extra sections: 
+10-20 symbols (illustrations),
+winstons star
+goal (minimum), 
+--gain knowledge, skills, and understanding of the conceptual intersection of
+ music production and world culture.
+--become more independent creative contemporary artist
+--increased awesomeness (by proximity) 
+opportunity (maximum),
+--henceforth go into the world culture and music production with 
+ a new 5-star attitude, name, and wingbird.
+--published in the first "WC-MP: the album"
+methods,
+ --we will look at the big picture, step-by-step, tone-by-note
+ --(world + culture) + (music + production)
+ --at least two teams, internal and external point metrics
+ --daily wingbird
+ --dual systems ClassIn and TippiLandDR
+ -- 
+  vocab (wb, eq, feedback), 
+  skills (DAW and TRAVEL), 
+  concepts (eg wingbird, rounds, feedback)
+
+  http://bedtimemath.org/fun-math-songs-in-world/
+  https://deliberatedirections.com/decision-making/
+
+  <div>
+        <% for(i in disc){%> 
+          <i id="disc<%=i.name%>" class="fas fa-compact-disc fa-pulse" onclick="playAudio('<%=i.url%>')"></i>
+        <% } %>
+      </div>

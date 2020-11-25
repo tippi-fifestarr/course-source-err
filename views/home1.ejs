@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw() {
+        var canvas = document.getElementById('tutorial');
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+        }
+      }
+      function playAudio(url) {
+        new Audio(url).play();
+}
+
+    </script>
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="150" height="150"></canvas>
+    <img src="/views/xanthe2020.jpg" height="69" width="69" onclick="playAudio('11102020-39+20+15+25--tk-gloomy_day.mp3')">image of xanthe2020</img>
+  </body>
+</html>
