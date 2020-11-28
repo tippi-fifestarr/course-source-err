@@ -27,6 +27,13 @@ methods,
 
   http://bedtimemath.org/fun-math-songs-in-world/
   https://deliberatedirections.com/decision-making/
+https://www.youtube.com/watch?v=htbRx2jgF-E&feature=youtu.be
+
+as part of the quest paradigm
+heros journey and wingbird heralds 
+featuring mentor and the game grid
+
+choosing to play game instead of doing your work
 
   <div>
         <% for(i in disc){%> 
