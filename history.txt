@@ -17,7 +17,10 @@ basic assumption is that each user is a document.
     6. talk about it to someone
 
 before the beginning: maximum 20 students, 10 wingbirds, scalable visitors page (ads?)
- 
+
+always reward good choice 
+why would i every dream of 
+why would i ever try a new character
 
 entrance.ejs:  this is the public access page. 
 welcome. role choice of student, wingbird, or visitors?guest? (icon)
@@ -68,6 +71,8 @@ a database of 10(tfs)+10(wb) : 4-6 minute missions: _________ , full point condi
 16. make and wear a hat that represents an important childhood memory, as "my how-to" video
 17. explain the plot of a movie, no spoilers!
 18. remove specific words from an existing document, render it as a new story
+
+retrieve an asset manifest?
 
 
 todo: https://fontawesome.com/how-to-use/on-the-web/styling/power-transforms

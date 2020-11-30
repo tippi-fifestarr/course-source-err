@@ -11,7 +11,7 @@ var app = express();
 const bodyParser = require("body-parser");
 // supossed to haveont
 const client = new MongoClient(uri, {useUnifiedTopology: true, useNewUrlParser: true});
-
+const port=process.env.PORT || 4000
 // let timer=0;
 
 // all on the front if you want to see the numbers on the front

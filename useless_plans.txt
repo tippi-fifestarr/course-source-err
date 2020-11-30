@@ -34,6 +34,13 @@ heros journey and wingbird heralds
 featuring mentor and the game grid
 
 choosing to play game instead of doing your work
+LOSING STREAKS AND HOW TO BREAK THEM
+two choices focus or distract to change the system
+
+my story
+heros story
+folk story
+
 
   <div>
         <% for(i in disc){%> 
