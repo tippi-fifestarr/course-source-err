@@ -1,6 +1,7 @@
 let ejsname = "success"
 // this gives us mongo access and MongoClient functions such as .connect 
 // const {MongoClient} = require('mongodb');
+require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://tippiFS:fcbk2020@cluster0.icrot.mongodb.net/input?retryWrites=true&w=majority";
 console.log('dreaming')
@@ -11,7 +12,7 @@ var app = express();
 const bodyParser = require("body-parser");
 // supossed to haveont
 const client = new MongoClient(uri, {useUnifiedTopology: true, useNewUrlParser: true});
-const PORT=process.env.PORT || 4000
+
 // let timer=0;
 
 // all on the front if you want to see the numbers on the front
@@ -203,4 +204,5 @@ app.get('/success', (req, res) => {
 //     });
 // })
 
+const PORT = process.env.PORT || 4000
 app.listen(PORT, () => console.log('Example app listening on port ${PORT}!'));
