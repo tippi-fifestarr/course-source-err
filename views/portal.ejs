@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>portal page (partials)</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/styles.css">
+    <script type="text/javascript">
+        function worldCycle(){
+            console.log("timer " + data.itimer)
+            setTimer()
+            function setTimer(){
+                let x = setInterval(function() {
+                    timer++
+                }, 999)
+    }
+        }
+      
+      function playAudio(url) {
+        new Audio(url).play();
+        console.log("played"+url)
+        while (playing){
+
+        }
+      }
+      function pauseit(url){
+        Audio(url).pause();
+        console.log("paused"+url)
+        let playing = false
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div id="iconcept">
+        <i class="fas fa-<%= data.icon %> fa-spin" onclick="worldCycle"></i>
+        <h1><%= data.itimer %> icon choose!</h1>
+    </div>
+    <div class="timedEarth">
+        <% console.log(worlds) %>
+        B<% for(world in worlds){%> 
+            <i id="world<%= worlds[world].name %>" class="fa-10x fas fa-<%= worlds[world].icon %> fa-<%= worlds[world].pulse %>" onclick="playAudio('<%= worlds[world].url %>')"></i>
+          <% } %>BER.ORG? NO!  go to https://fontawesome.com/icons?d=gallery , search and copy the text below your chosen icon, paste it below. 
+        <br> 
+    </div>
+    <div id="inputbox">
+        <form id="form" action="/" method="POST">
+            <input name="name" type="text" autocomplete="off" placeholder="your-name" required />
+            
+            <input name="iconname" type="text" autocomplete="off" placeholder="icon-name" required />
+            
+            <input type="radio" name="sex" value="male">Male
+            <input type="radio" name="sex" value="female">Female
+            <input type="radio" name="sex" value="other">other
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+  </body>
+</html>
+<style>
+  .timedEarth{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .big-icon {
+    font-size: 500px;
+}
+</style>

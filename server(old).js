@@ -1,67 +1,81 @@
-// 12.03.2020 4:40 the mission is a step. the music in my can.  can i? yes i can. 
-// what is step 0? clean it up.  step 1 (spin cycle partial)
-let redirect_ejs = "success"
-// get the users ip info
-var ip = require('ip')
-dispIP = ip.address() // my ip address
+// success page
+let ejsname = "success"
+// this gives us mongo access and MongoClient functions such as .connect 
+// const {MongoClient} = require('mongodb');
 require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://tippiFS:fcbk2020@cluster0.icrot.mongodb.net/input?retryWrites=true&w=majority";
-console.log('dreaming of success')
+console.log('dreaming')
 
 var express = require('express');
 var app = express();
+// this was missing, parse the body+boilerplate
 const bodyParser = require("body-parser");
+// supossed to haveont
 const client = new MongoClient(uri, {useUnifiedTopology: true, useNewUrlParser: true});
 
-let timer
-worldCycle
-function worldCycle(){
-  setTimer()
-  function setTimer(){
-      let x = setInterval(function() {
-          timer++
-      }, 999)
-}
-}
-// step 1 (moved timer into ejs portal partial)
-// step 2 spin the earth (between asia/americas)
-// step 3 get icon from user
-// step 4 redirect success and retreive relavent document from mong
-// step 5 connect all at once 
-// step 6 
+// let timer=0;
+
+// all on the front if you want to see the numbers on the front
+// setTimer()
+// function setTimer(){
+// let x = setInterval(function() {
+//     timer++
+// //    this is where it  // e
+//     // location.reload();
+//     }, 999)
+// }
+
 
 app.use(express.static(__dirname + '/'));
+// Set EJS as templating engine -set name and value - booiler plot
 app.set('view engine', 'ejs');
+// boilerplate stuff always same in new apps
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
 // get the stuff and put it on front and credit
 app.get('/', (req, res) => {
-
+  // The render method takes the name of the HTML page to be rendered as input This page should be in the views folder in the root directory. We can pass multiple properties and values 
   const data = {
-    icon: 'user-graduate',
-    ipinfo: dispIP,
-    itimer: timer
+    name: 'danjo',
+    hobbies: [
+      '打游戏',
+      'WC-MP',
+      'skirpaderp'
+    ],
+    food: [
+      '煎饼果子',
+      ''
+
+    ]
+    // timer
   }
-  const worlds = [
+  const disc = [
     {
-    name : "america",
+    name : "kick",
     url : '../public/camel(kick).mp3',
-    icon : 'globe-americas',
+    pulse : 'pulse'
+    },
+    {
+    name : "snare",
+    url : '../public/camel(snare).mp3',
+    pulse : 'pulse'
+    },
+    {
+    name : "melody",
+    url : '../public/camel(melody).mp3',
     pulse : 'spin'
     },
     {
-    name : "china",
-    url : '../public/camel(snare).mp3',
-    icon : 'globe-asia',
-    pulse : 'pulse'
+    name : "campbell",
+    url : '../public/camel(campbell).mp3',
+    pulse : 'spin'
     }
   ]
-// <i class="fab fa-node-js"></i>
-  res.render('portal', {
-    data: data, worlds: worlds
+  // as an object, here we are passing data:data
+  res.render('home', {
+    data: data, disc: disc
   });
 });
 
@@ -70,16 +84,18 @@ app.post('/', (req, res) => {
   // destructuring req.body which apparently is undefined
   const {
     name,
-    iconname,
-    itimer,
+    email,
+    favoriteColor,
+    homeTown,
     sex
   } = req.body
   //   req.body.name --etc request / response
   var data = {
     name: name,
-    iconname: iconname,
-    sex: sex,
-    timer: itimer
+    email: email,
+    favoriteColor: favoriteColor,
+    homeTown: homeTown,
+    sex: sex
   }
   // console.log(data)
   // here is where we send to database!
@@ -96,6 +112,8 @@ app.post('/', (req, res) => {
       // https://docs.mongodb.com/drivers/node/fundamentals/crud/write-operations/insert create variables that can plug into the find?
       const database = client.db("input")
       const collection = database.collection("students")
+      // insert this just name and data
+      // const doc = { name: data.name, email: data.email };
       const doc = {
         data
       }
@@ -128,19 +146,19 @@ app.post('/', (req, res) => {
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
   }
   // sent to database
-  res.redirect('/tutorialpurgatory')
+  res.redirect('/success')
   // , {name: name, email:email, favoriteColor: favoriteColor, homeTown: homeTown})
   //   sends to sex page
   
 })
 
-app.get('/tutorialpurgatory', (req, res) => {
+app.get('/success', (req, res) => {
   const resultsArr = []
 // this is the simplest way to start without promises
   MongoClient.connect(uri, function(err, client){
     const db = client.db('input')
     // cursor is a pointer to a memory location
-    const cursor = db.collection("students").find()
+    const cursor = db.collection("students").find({})
     // iterates through the "docs", doc=i=1 of the cursor
     cursor.forEach((doc, err)=> {
       // pushing doc into the resultsArr

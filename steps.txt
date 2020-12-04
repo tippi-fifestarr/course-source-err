@@ -1,17 +1,26 @@
 TODO
 X get the node.js server running
-    listening on port
+    x listening on port
 X get the node.js server running express
 X hook into mongodb 
 x find all the documents
-find one document
+x find one document
 x insertOne a document
-look up npm validation
+x look up npm validation
 X ejs with inputs that back end listens to
-when the user presses submit it validates the data and sends to mongodb
-insertOne? collection.insert 
-deploy to hiroku https://careerkarma.com/blog/deploy-application-to-heroku/
+x when the user presses submit it validates the data and sends to mongodb
+    ?>?insertOne? collection.insert 
+xdeploy to heroku https://careerkarma.com/blog/deploy-application-to-heroku/
+
 front-end netlify to heroku 
+portal is a header or footer
+the partial is the hud
+x students put inputs into database
+do the first thing that the student would do 
+font 
+only connect to mongodb once https://stackoverflow.com/a/62169321
+(unlock tippi)
+9 skins
 
 https://bezkoder.com/node-js-upload-store-images-mongodb/
 https://programmerblog.net/nodejs-file-upload-tutorial/

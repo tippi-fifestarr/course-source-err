@@ -1,4 +1,24 @@
 what i know so far:
+11.30 - missions (spells and minions) and distractions
+
+12.3.2020 -- drawings begun (called Jorge, left voicemail)
+algorithm: step by step (progress bar 0-10) + if (cannotdo){split(left, right)} , if (cando){doleft/doright}
+day 1 (KEY/PLANE): OPENING CYCLE is PROMISE
+
+website is LOCKED to STUDENTS, but WINGBIRDS can login to use all APPS, and PATRONS can watch at THE PROGRESS BAR
+opening cycle = 50 minutes, topicon <i class="fas fa-key"></i> (key, &, promise)
+function(1sthalf optimized for <6x60seconds focus) -> normal seeming lecture on topic, <1 minute questions, vote and discussion, <60sec?, application, <60 seconds of questions,  group activity, 
+key questions: how to create culture, why do we culture, what is your key
+
+
+speak, listen, think/don't, answer?  QUESTION cycle
+DOCUMENT CULTURE CYCLE: Document Encounter<6 minutes, name it, if(remainingtime>0){D.E.(360)}, comment, if(remainingtime>0){D.E.(360)}, rename, difficulty
+
+
+x
+
+day 4:
+(y/n) is the first xanthe more unravelled than the second xanthe?
 
 today is 11.20.2020, less than 20 days before I need everything working well.
 what is everything?
@@ -86,3 +106,23 @@ the elements <i class="fas fa-icicles"></i><i class="fab fa-free-code-camp"><i c
 
 the toolkit </i><i class="fas fa-fire-extinguisher"></i>
 
+
+TEACHERS ASSISTANT PAGE:
+TA may know their students passicon (already taken await)
+
+EXAMPLE PROGRESS BAR:
+Day 2: 
+<i class="fas fa-atom"></i>
+<i class="fas fa-fan"></i>
+<i class="fas fa-charging-station"></i>
+<i class="far fa-lightbulb"></i>
+<i class="fas fa-wind"></i>
+<i class="fas fa-x-ray"></i> very interesting icon
+
+world america as a concept
+strikingly
+direction of innovation
+the tools or the method the way
+we need new ways - talktimer 
+talk prompt
+https://www.theschooloflife.com/thebookoflife/virtual-dinners-conversation-menus/
