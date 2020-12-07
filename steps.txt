@@ -21,6 +21,8 @@ font
 only connect to mongodb once https://stackoverflow.com/a/62169321
 (unlock tippi)
 9 skins
+wingbird page: 1. enter Real Name (->mongodb), WingBirdName (->mongodb), and your own email (find(realname))
+icon progress bar: <i class="fas fa-key"></i> 2 <i class="fab fa-keycdn"></i> 3 <i class="fas fa-atlas"></i> 4 <i class="fas fa-comment-slash"></i> 5 <i class="fas fa-file-import"></i> 6 <i class="fas fa-hiking"></i> 7 <i class="fas fa-clipboard-check"></i> 8 <i class="fas fa-align-justify"></i> 9 <i class="far fa-address-book"></i>
 
 https://bezkoder.com/node-js-upload-store-images-mongodb/
 https://programmerblog.net/nodejs-file-upload-tutorial/

@@ -13,15 +13,20 @@ var express = require('express');
 var app = express();
 const bodyParser = require("body-parser");
 const client = new MongoClient(uri, {useUnifiedTopology: true, useNewUrlParser: true});
+function myFunc(arg) {
+  console.log(`arg was => ${arg}`);
+}
+
+setTimeout(myFunc, 10000, 'funky');
 
 let timer
 worldCycle
 function worldCycle(){
   setTimer()
   function setTimer(){
-      let x = setInterval(function() {
-          timer++
-      }, 999)
+    let x = setInterval(function() {
+      timer++
+    }, 999)
 }
 }
 // step 1 (moved timer into ejs portal partial)
@@ -51,18 +56,18 @@ app.get('/', (req, res) => {
     url : '../public/camel(kick).mp3',
     icon : 'globe-americas',
     pulse : 'spin'
-    },
-    {
+  },
+  {
     name : "china",
     url : '../public/camel(snare).mp3',
     icon : 'globe-asia',
     pulse : 'pulse'
-    }
-  ]
+  }
+]
 // <i class="fab fa-node-js"></i>
-  res.render('portal', {
-    data: data, worlds: worlds
-  });
+res.render('portal', {
+  data: data, worlds: worlds
+});
 });
 
 // post is for sending from front end to back end
@@ -120,6 +125,7 @@ app.post('/', (req, res) => {
   }
 
   main().catch(console.error);
+
 
   async function listDatabases(client) {
     databasesList = await client.db().admin().listDatabases();
