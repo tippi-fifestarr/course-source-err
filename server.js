@@ -1,6 +1,7 @@
 // 12.03.2020 4:40 the mission is a step. the music in my can.  can i? yes i can. 
 // what is step 0? clean it up.  step 1 (spin cycle partial)
 let redirect_ejs = "success"
+const resultsArr = []
 // get the users ip info
 var ip = require('ip')
 dispIP = ip.address() // my ip address
@@ -38,6 +39,7 @@ function worldCycle(){
 
 app.use(express.static(__dirname + '/'));
 app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -63,11 +65,11 @@ app.get('/', (req, res) => {
     icon : 'globe-asia',
     pulse : 'pulse'
   }
-]
-// <i class="fab fa-node-js"></i>
-res.render('portal', {
-  data: data, worlds: worlds
-});
+  ]
+  // <i class="fab fa-node-js"></i>
+  res.render('portal', {
+    data: data, worlds: worlds
+  });
 });
 
 // post is for sending from front end to back end
@@ -79,14 +81,6 @@ app.post('/', (req, res) => {
     itimer,
     sex
   } = req.body
-  //   req.body.name --etc request / response
-  var data = {
-    name: name,
-    iconname: iconname,
-    sex: sex,
-    timer: itimer
-  }
-  // console.log(data)
   // here is where we send to database!
 
   async function main() {
@@ -102,7 +96,10 @@ app.post('/', (req, res) => {
       const database = client.db("input")
       const collection = database.collection("students")
       const doc = {
-        data
+        name,
+        iconname,
+        itimer,
+        sex
       }
       const result = await collection.insertOne(doc);
       // insertedCount makes sure
@@ -133,66 +130,57 @@ app.post('/', (req, res) => {
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
   }
-  // sent to database
+  // sent to database, PRISC next step is do i have to pass data.name through to the next page?
   res.redirect('/tutorialpurgatory')
+  resultsArr.push(name)
+  resultsArr.push(iconname)
   // , {name: name, email:email, favoriteColor: favoriteColor, homeTown: homeTown})
   //   sends to sex page
+  // maybe res.
   
 })
-
+// PRISC could be here
 app.get('/tutorialpurgatory', (req, res) => {
-  const resultsArr = []
-// this is the simplest way to start without promises
-  MongoClient.connect(uri, function(err, client){
-    const db = client.db('input')
-    // cursor is a pointer to a memory location
-    const cursor = db.collection("students").find()
-    // iterates through the "docs", doc=i=1 of the cursor
-    cursor.forEach((doc, err)=> {
-      // pushing doc into the resultsArr
-      resultsArr.push(doc)
-      console.log("docit" + resultsArr)
-    }, function(){
-      client.close()
-      //console.log("before success" + resultsArr)
-      res.render(`success.ejs`, {
-        data: resultsArr
-      })
-    })
 
-  })
+// this is the simplest way to start without promises
+  console.log('test', resultsArr)
+      console.log("before success" + resultsArr)
+      res.render('tutorialpurgatory', {
+        name: resultsArr
+     });
+
 })
 
-// app.get('/success', (req, res) => {
-//     console.log('success test means the data went through')
+app.get('/success', (req, res) => {
+    console.log('success test means the data went through')
     
-//     const client = new MongoClient(uri);
-//     success()
-//     async function success() {
-//     // The render method takes the name of the HTML 
-//     // page to be rendered as input 
-//       const resultsArr = []
-//       try {
-//       // The await operator is used to wait for a Promise. It can only be used inside an async function.
-//       await client.connect();
-//       const database = client.db("input")
-//       const cursor = database.collections("students").find({})
-//       cursor.forEach((doc, err)=> {
-//         resultsArr.push(doc)
-//       })
-//       res.render('success.ejs', {
-//         // data: data
-//       });
-//       } catch (e) {
-//         console.error(e)
-//       } finally { //we want to be sure 
-//         await client.close();
-//       }
-//     }
-//     res.render('success.ejs', {
-//       // data: data
-//     });
-// })
+    const client = new MongoClient(uri);
+    success()
+    async function success() {
+    // The render method takes the name of the HTML 
+    // page to be rendered as input 
+      const resultsArr = []
+      try {
+      // The await operator is used to wait for a Promise. It can only be used inside an async function.
+      await client.connect();
+      const database = client.db("input")
+      const cursor = database.collections("students").find({})
+      cursor.forEach((doc, err)=> {
+        resultsArr.push(doc)
+      })
+      res.render('success.ejs', {
+        // data: data
+      });
+      } catch (e) {
+        console.error(e)
+      } finally { //we want to be sure 
+        await client.close();
+      }
+    }
+    res.render('success.ejs', {
+      // data: data
+    });
+})
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () => console.log('Example app listening on port ${PORT}!'));

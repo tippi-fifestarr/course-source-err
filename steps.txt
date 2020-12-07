@@ -1,4 +1,4 @@
-TODO
+TODO (x = done, ? = not sure)
 X get the node.js server running
     x listening on port
 X get the node.js server running express
@@ -12,55 +12,40 @@ x when the user presses submit it validates the data and sends to mongodb
     ?>?insertOne? collection.insert 
 xdeploy to heroku https://careerkarma.com/blog/deploy-application-to-heroku/
 
-front-end netlify to heroku 
-portal is a header or footer
-the partial is the hud
+? front-end netlify to heroku 
+? portal is a header or footer
+? the partial is the hud
 x students put inputs into database
-do the first thing that the student would do 
-font 
+build the first thing that the student would do (DOCREAD)
+(unlock tippi page)
+
 only connect to mongodb once https://stackoverflow.com/a/62169321
-(unlock tippi)
-9 skins
-wingbird page: 1. enter Real Name (->mongodb), WingBirdName (->mongodb), and your own email (find(realname))
-icon progress bar: <i class="fas fa-key"></i> 2 <i class="fab fa-keycdn"></i> 3 <i class="fas fa-atlas"></i> 4 <i class="fas fa-comment-slash"></i> 5 <i class="fas fa-file-import"></i> 6 <i class="fas fa-hiking"></i> 7 <i class="fas fa-clipboard-check"></i> 8 <i class="fas fa-align-justify"></i> 9 <i class="far fa-address-book"></i>
+? css skins?
+
+wingbird page: 1. enter Real Name (->mongodb),
+     3 WingBirdName (->mongodb), 
+    2 icon-choice, 
+    4 and your own email (find(realname)), 
+    5 object of simple exercises  
+
+icon object: 1 <i class="fas fa-key"></i> 2 <i class="fab fa-keycdn"></i> 3 <i class="fas fa-atlas"></i> 4 <i class="fas fa-comment-slash"></i> 5 <i class="fas fa-file-import"></i> 6 <i class="fas fa-hiking"></i> 7 <i class="fas fa-clipboard-check"></i> 8 <i class="fas fa-align-justify"></i> 9 <i class="far fa-address-book"></i>
+
 
 https://bezkoder.com/node-js-upload-store-images-mongodb/
 https://programmerblog.net/nodejs-file-upload-tutorial/
 
 https://docs.mongodb.com/drivers/node/fundamentals/connection
 
-whats this? ????
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://tippiFS:<password>@cluster0.icrot.mongodb.net/<dbname>?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-
-<dbname? is that Project0 or cluster0
-src="./steps-question.png"
-
-https://docs.atlas.mongodb.com/driver-connection/
-    have the driver
-    TLS
-    IP access list (0.0.0.0 ? actual ip)
-    Database User (https://docs.mongodb.com/manual/core/security-users/)
+x https://docs.atlas.mongodb.com/driver-connection/
+  x  have the driver
+  x  TLS
+  x  IP access list (0.0.0.0 ? actual ip)
+  x  Database User (https://docs.mongodb.com/manual/core/security-users/)
 https://docs.mongodb.com/drivers/node/
-
 
 now that done:
 What’s next?
 
-Today, you were able to connect to a MongoDB database from a Node.js script, retrieve a list of databases in your cluster, and view the results in your console. Nice!
-
-In future posts in this series, we’ll dive into each of the CRUD (create, read, update, and delete) operations as well as topics like change streams, transactions, and the aggregation pipeline, so you’ll have the tools you need to successfully interact with data in your databases.
-
-In the meantime, check out the following resources:
-
-    MongoDB Node.js Driver (https://mongodb.github.io/node-mongodb-native/index.html)
-    Official MongoDB Documentation on the MongoDB Node.js Driver (https://bit.ly/NodeDocs_lauren)
     MongoDB University Free Course: M220JS: MongoDB for Javascript Developers
  (https://bit.ly/M220JS)
  
