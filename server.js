@@ -131,9 +131,9 @@ app.post('/', (req, res) => {
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
   }
   // sent to database, PRISC next step is do i have to pass data.name through to the next page?
-  res.redirect('/tutorialpurgatory')
   resultsArr.push(name)
   resultsArr.push(iconname)
+  res.redirect('/tutorialpurgatory')
   // , {name: name, email:email, favoriteColor: favoriteColor, homeTown: homeTown})
   //   sends to sex page
   // maybe res.
