@@ -140,8 +140,14 @@ app.post('/', (req, res) => {
   
 })
 // PRISC could be here
-app.get('/tutorialpurgatory', (req, res) => {
 
+let TPname = resultsArr[0]
+let TPicon = resultsArr[1]
+resultsArr[0] = null
+resultsArr[1] = null
+console.log('before TP', resultsArr)
+app.get('/tutorialpurgatory/:TPname', (req, res) => {
+  res.send(req.params.TPname)
 // this is the simplest way to start without promises
   console.log('test', resultsArr)
       console.log("before success" + resultsArr)
