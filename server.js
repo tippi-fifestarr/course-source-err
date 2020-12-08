@@ -1,7 +1,7 @@
 // 12.03.2020 4:40 the mission is a step. the music in my can.  can i? yes i can. 
 // what is step 0? clean it up.  step 1 (spin cycle partial)
 let redirect_ejs = "success"
-const resultsArr = []
+const params = {name: '', iconname: ''}
 // get the users ip info
 var ip = require('ip')
 dispIP = ip.address() // my ip address
@@ -131,9 +131,17 @@ app.post('/', (req, res) => {
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
   }
   // sent to database, PRISC next step is do i have to pass data.name through to the next page?
-  resultsArr.push(name)
-  resultsArr.push(iconname)
+  params.name = name
+  params.iconname = iconname
+
+  // link and call to the params here so that the page is /name?
+
   res.redirect('/tutorialpurgatory')
+
+  //res.render('tutorialpurgatory', { name: params.name }, function (err, html) {
+   // res.send(res.params)
+  //})
+  //res.redirect('/tutorialpurgatory')
   // , {name: name, email:email, favoriteColor: favoriteColor, homeTown: homeTown})
   //   sends to sex page
   // maybe res.
@@ -141,19 +149,10 @@ app.post('/', (req, res) => {
 })
 // PRISC could be here
 
-let TPname = resultsArr[0]
-let TPicon = resultsArr[1]
-resultsArr[0] = null
-resultsArr[1] = null
-console.log('before TP', resultsArr)
-app.get('/tutorialpurgatory/:TPname', (req, res) => {
-  res.send(req.params.TPname)
-// this is the simplest way to start without promises
-  console.log('test', resultsArr)
-      console.log("before success" + resultsArr)
-      res.render('tutorialpurgatory', {
-        name: resultsArr
-     });
+app.get('/tutorialpurgatory', (req, res) => {
+  console.log('in tutorialpurgatory')
+  //res.render('tutorialpurgatory')
+  res.render('tutorialpurgatory', {name: params.name, iconname: params.iconname})
 
 })
 

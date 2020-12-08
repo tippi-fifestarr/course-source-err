@@ -4,6 +4,10 @@ login progress linked to video key (draw an icon method)
 concept: "tippi-fifestarr"
 title: "tippistory"
 draw-canvas: money.png
+https://www.dummies.com/computers/pcs/music-on-your-pc/words-to-know-as-a-music-producer/
+
+<h1>TP:  <%#= params.name %> login success! </h1>
+    <h2><i id="icon<%= params.name %>" class="fa-10x fas fa-<%= params.iconname %> fa-spin" onclick="playAudio('../public/unravelling_guide(2).mp3')"></i></h2>
 
 key factors: table of contents (icons)
 
