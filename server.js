@@ -151,6 +151,7 @@ app.post('/', (req, res) => {
 
 app.get('/tutorialpurgatory', (req, res) => {
   console.log('in tutorialpurgatory')
+  
   //res.render('tutorialpurgatory')
   res.render('tutorialpurgatory', {name: params.name, iconname: params.iconname})
 
