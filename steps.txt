@@ -30,7 +30,10 @@ wingbird page: 1. enter Real Name (->mongodb),
 
 icon object: 1 <i class="fas fa-key"></i> 2 <i class="fab fa-keycdn"></i> 3 <i class="fas fa-atlas"></i> 4 <i class="fas fa-comment-slash"></i> 5 <i class="fas fa-file-import"></i> 6 <i class="fas fa-hiking"></i> 7 <i class="fas fa-clipboard-check"></i> 8 <i class="fas fa-align-justify"></i> 9 <i class="far fa-address-book"></i>
 
-
+if the user has the same icon as another player, they can delete(1) that player?
+when user goes from p.ejs to tp.ejs change location to "tp" and after 6 minutes prompt() for presence, if failed or doesn't get input, then 1 minute later change location to "dead"
+https://fontawesome.com/icons?d=gallery&m=free
+  
 https://bezkoder.com/node-js-upload-store-images-mongodb/
 https://programmerblog.net/nodejs-file-upload-tutorial/
 

@@ -6,6 +6,10 @@ title: "tippistory"
 draw-canvas: money.png
 https://www.dummies.com/computers/pcs/music-on-your-pc/words-to-know-as-a-music-producer/
 
+12.8 priscilla was there when i got it, total hours less than 6, am i better than before?
+yes. certainly, that does not mean i can stop moving.  my next goal and unread pages, remaining time in ableton no repreive in sight. 
+https://source.opennews.org/articles/audio-browser/  mp3 downloaded remix it?
+
 <h1>TP:  <%#= params.name %> login success! </h1>
     <h2><i id="icon<%= params.name %>" class="fa-10x fas fa-<%= params.iconname %> fa-spin" onclick="playAudio('../public/unravelling_guide(2).mp3')"></i></h2>
 
